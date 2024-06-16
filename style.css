@@ -1,0 +1,282 @@
+/* Nomarlización */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+/* Cabecera */
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 3%;
+  background-color: transparent;
+}
+
+/* logo */
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* barra de navegacion */
+.navList {
+  display: flex;
+}
+
+.navList a {
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+.navList a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Menú de hamburguesa */
+#menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-icon {
+  font-size: 35px;
+  z-index: 101;
+  cursor: pointer;
+}
+
+.menu-icon-action {
+  display: none;
+}
+
+/* Sección Hero */
+.hero {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, #31494e 0%, #202ab0 25%, #131313 75%);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  padding: 0 8%;
+}
+
+.hero-text h5 {
+  font-family: "Quantico", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.hero-text h1 {
+  font-family: "Stardos Stencil", system-ui;
+  font-size: 50px;
+  line-height: 1;
+  margin: 0 0 30px;
+}
+
+.hero-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.hero-text p {
+  font-family: "Quantico", sans-serif;
+  font-size: 80%;
+  margin-bottom: 40px;
+  line-height: 1.9;
+}
+
+.hero-img img {
+  width: 450px;
+  margin: 10% 0 0 10%;
+  height: auto;
+  transition: all 5s linear;
+}
+
+.hero-img img:hover {
+  width: 500px;
+  opacity: 0.6;
+}
+
+.hero-text a {
+  display: inline-block;
+  background-color: #4d4d4d;
+  border: 1px solid transparent;
+  padding: 15px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+}
+
+.hero-text a:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.tech {
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+.hero-text a.tech i {
+  vertical-align: auto;
+  margin-right: 5px;
+}
+
+/* Redes sociales */
+.icons {
+  position: absolute;
+  top: 50vh;
+  padding: 0 3%;
+  transform: translateY(-50%);
+}
+
+.icons i {
+  display: block;
+  margin: 26px 0;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+
+.icons i:hover {
+  color: #4d4d4d;
+  transform: translateY(-5px);
+}
+
+/* scroll */
+.scroll-down {
+  position: absolute;
+  bottom: 6%;
+  right: 3%;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  background-color: #7d7c7c;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.scroll-down i:hover {
+  transform: translateY(-5px);
+}
+
+/* Media Queries: Responsive*/
+@media (max-width: 992px) {
+  section {
+    padding: 0 3%;
+    transition: 0.2s;
+  }
+
+  .hero-text {
+    padding-top: 0;
+  }
+  
+  .hero-img {
+    text-align: center;
+  }
+  
+  .hero-img img {
+    width: 80%;
+    margin: 10% 0 0 10%;
+  }
+  
+  .hero-text p {
+    font-size: 70%;
+  }
+  
+  .icons {
+    display: none;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon-action {
+    display: block;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  .hero-text {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-text a {
+    padding: 18px 30px;
+    font-size: 10px;
+  }
+
+  .hero-img img {
+    margin: 0;
+  }
+
+  .hero {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .navList {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 200px;
+    height: 180px;
+    background-color: #021719ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: all 0.5s ease-out;
+  }
+
+  .navList a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  #menu-toggle:checked + label.menu-icon-action + ul {
+    right: 0;
+  }
+}
